@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Bank" default="compile" basedir=".">
+	
+	<target name="clean">
+		<delete dir="build"></delete>
+	</target>
+	
+	<target name="prepare" depends="clean">
+		<mkdir dir="build"/>
+	</target>
+	
+	<target name="compile" depends="prepare">
+		<javac classpath="lib\junit.jar" srcdir="src" destdir="build" includeantruntime="false"></javac>
+	</target>
+	
+</project>
