@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Bank" default="compile" basedir=".">
+<project name="Bank" default="test" basedir=".">
 	
 	<target name="clean">
-		<delete dir="build"></delete>
+		<delete dir="build"/>
+		<delete dir="reports"/>
 	</target>
 	
 	<target name="prepare" depends="clean">
 		<mkdir dir="build"/>
+		<mkdir dir="reports"/>
 	</target>
 	
 	<target name="compile" depends="prepare">
 		<javac classpath="lib\junit.jar" srcdir="src" destdir="build" includeantruntime="false"></javac>
+	</target>
+	
+	<target name="test" depends="compile">
+		<junit printsummary="yes" fork="true" haltonfailure="yes">
+			<classpath path="lib\junit.jar"/>
+			<classpath path="build"/>
+			<formatter type="brief" usefile="no"/>
+			<formatter type="xml"/>
+			<batchtest todir="reports">
+				<fileset dir="build" includes="**/*Test.class"/>
+			</batchtest>
+		</junit>
 	</target>
 	
 </project>
