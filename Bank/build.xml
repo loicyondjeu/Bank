@@ -17,7 +17,7 @@
 	
 	<target name="test" depends="compile">
 		<junit printsummary="yes" fork="true" haltonfailure="yes">
-			<classpath path="lib\juni.jar"/>
+			<classpath path="lib\junit.jar"/>
 			<classpath path="build"/>
 			<formatter type="brief" usefile="no"/>
 			<formatter type="xml"/>
