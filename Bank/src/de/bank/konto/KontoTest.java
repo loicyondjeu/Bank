@@ -4,10 +4,12 @@ import junit.framework.TestCase;
 
 public class KontoTest extends TestCase {
 	
-	public void testAccountCreation(){
+	public void testAccount(){
 		Konto testAccount = new Konto("Loic", "geheim");
 		testAccount.einzahlen(1000.0);
 		assertEquals(1000.0, testAccount.getKontostand());
+		testAccount.Allesauszahlen();
+		assertEquals(0.0, testAccount.getKontostand());
 	}
 
 }
