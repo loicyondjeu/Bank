@@ -9,7 +9,7 @@ public class KontoTest extends TestCase {
 		testAccount.einzahlen(1000.0);
 		assertEquals(1000.0, testAccount.getKontostand());
 		testAccount.auszahlen();
-		assertEquals("0.0", testAccount.getKontostand());
+		assertEquals(0.0, testAccount.getKontostand());
 	}
 	
 	public void testdummyMethod(){
