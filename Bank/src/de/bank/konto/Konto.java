@@ -39,7 +39,7 @@ public class Konto {
 	}
 
 	public void auszahlen() {
-		this.kontostand = 0.0;
+		this.kontostand = 0;
 	}
 
 }
