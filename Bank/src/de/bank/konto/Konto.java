@@ -38,4 +38,8 @@ public class Konto {
 		this.kontostand += betrag;
 	}
 
+	public void auszahlen() {
+		this.kontostand = 0.0;
+	}
+
 }

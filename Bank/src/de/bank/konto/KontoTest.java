@@ -8,6 +8,8 @@ public class KontoTest extends TestCase {
 		Konto testAccount = new Konto("Loic", "geheim");
 		testAccount.einzahlen(1000.0);
 		assertEquals(1000.0, testAccount.getKontostand());
+		testAccount.auszahlen();
+		assertEquals("0.0", testAccount.getKontostand());
 	}
 	
 	public void testdummyMethod(){
