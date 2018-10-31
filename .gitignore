@@ -1,0 +1,6 @@
+app/bin/
+app/settings/
+app/build/
+app/lib/
+app/.classpath
+app/.project
