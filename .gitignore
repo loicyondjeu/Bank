@@ -1,6 +1,6 @@
-app/bin/
-app/settings/
-app/build/
-app/lib/
-app/.classpath
-app/.project
+bank/bin/
+bank/settings/
+bank/build/
+bank/lib/
+bank/.classpath
+bank/.project
